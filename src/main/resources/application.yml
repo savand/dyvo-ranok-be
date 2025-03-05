@@ -20,7 +20,7 @@ app:
   gc:
     apiKey: ${G_API_KEY}
     recaptchaSiteKey: ${RECAPTCHA_SITE_KEY}
-
+    smtpPassword: ${SMTP_PASS}
 
 ---
 spring:

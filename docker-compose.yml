@@ -13,6 +13,7 @@ services:
       - SPRING_CONFIG_LOCATION=file:///appconfig/application.yml
 #      - G_API_KEY=
 #      - RECAPTCHA_SITE_KEY=
+#      - SMTP_PASS=
     volumes:
       - ~/dr/logs:/logs
       - ~/dr/config/application.yml:/appconfig/application.yml

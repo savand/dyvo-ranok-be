@@ -3,6 +3,7 @@ package org.savand.controller;
 import jakarta.validation.ConstraintViolationException;
 import jakarta.validation.constraints.NotNull;
 import lombok.extern.slf4j.Slf4j;
+import org.savand.exception.InvalidCaptchaException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -15,7 +16,7 @@ import java.util.UUID;
 @Slf4j
 public class ExceptionHandlerController {
 
-    @ExceptionHandler({SecurityException.class, UnsupportedOperationException.class, MethodArgumentNotValidException.class, ConstraintViolationException.class, IllegalArgumentException.class})
+    @ExceptionHandler({SecurityException.class, UnsupportedOperationException.class, MethodArgumentNotValidException.class, ConstraintViolationException.class, IllegalArgumentException.class, InvalidCaptchaException.class})
     public ResponseEntity<Object> handleArgumentNotValidException(Exception ex) {
         log.error(ex.toString());
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);

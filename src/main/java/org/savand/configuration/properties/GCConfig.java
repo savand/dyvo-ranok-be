@@ -13,5 +13,6 @@ public class GCConfig {
 
     private String apiKey;
     private String recaptchaSiteKey;
+    private String smtpPassword;
 
 }
