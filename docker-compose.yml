@@ -11,6 +11,8 @@ services:
       - TZ=Europe/Kyiv
       - JAVA_TOOL_OPTIONS=-Xmx256m -Xms256m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/dump
       - SPRING_CONFIG_LOCATION=file:///appconfig/application.yml
+#      - G_API_KEY=
+#      - RECAPTCHA_SITE_KEY=
     volumes:
       - ~/dr/logs:/logs
       - ~/dr/config/application.yml:/appconfig/application.yml
