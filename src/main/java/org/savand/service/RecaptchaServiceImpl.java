@@ -21,7 +21,7 @@ import java.net.http.HttpResponse;
 public class RecaptchaServiceImpl implements RecaptchaService {
 
     private final HttpClient httpClient;
-    private final ObjectMapper objectMapper = new ObjectMapper();
+    private final ObjectMapper objectMapper;
     private final GCConfig gcConfig;
 
     @Override
