@@ -1,0 +1,39 @@
+server:
+  servlet:
+    context-path: /dyvo-ranok
+
+spring:
+
+logging:
+  pattern:
+    file: "%date{HH:mm:ss.SSS} %-5level[%.4thread][%c{1}.%-3line] %msg %n"
+  file:
+    name: logs/${server.servlet.context-path}.log
+    max-size: 20MB
+    max-history: 20
+  level:
+    root: INFO
+
+app:
+  cors:
+    allowed-origin: 'www.dyvo-ranok.com.ua'
+  gc:
+    apiKey: ${G_API_KEY}
+    recaptchaSiteKey: ${RECAPTCHA_SITE_KEY}
+
+
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+
+logging:
+
+  level:
+    org.savand: DEBUG
+
+app:
+  cors:
+    allowed-origin: '*'
+

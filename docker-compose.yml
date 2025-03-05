@@ -1,0 +1,17 @@
+version: "3.9"
+name: dr
+services:
+  p2:
+    image: ghcr.io/savand/dyvoranok-be/dyvoranok-be:latest
+    container_name: dr
+    ports:
+      - target: 8080
+        published: 8080
+    environment:
+      - TZ=Europe/Kyiv
+      - JAVA_TOOL_OPTIONS=-Xmx256m -Xms512m -XX:+HeapDumpOnOut0fMemoryError -XX:HeapDumpPath=/dump
+      - SPRING_CONFIG_LOCATION=file:///appconfig/application.yml
+    volumes:
+      - ~/dr/logs:/logs
+      - ~/dr/config/application.yml:/appconfig/application.yml
+      - ~/dr/dump:/dump
