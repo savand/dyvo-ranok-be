@@ -14,7 +14,7 @@ class FormSenderServiceImplTest {
 //    @Test
 //    void send() {
 //        formSenderService.send(FormDto.builder()
-//                        .name("Test")
+//                        .userName("Test")
 //                        .phoneNumber("111111111")
 //                .build());
 //    }

@@ -28,7 +28,7 @@ public class FormSenderServiceImpl implements FormSenderService {
         message.setSubject("Замовлення із форми сайту");
 
         message.setText(String.format("Замовлення від %s. Зв'язатись за номером телефону: %s",
-                formDto.name(),
+                formDto.userName(),
                 formDto.phoneNumber()));
 
         emailSender.send(message);
