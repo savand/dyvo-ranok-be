@@ -12,8 +12,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class FormSenderServiceImpl implements FormSenderService {
 
-    //TODO when tested change to dyvoranok@gmail.com
-    private static final String MAIL_ADDRESS = "savka.and@gmail.com";
+    private static final String MAIL_ADDRESS = "dyvoranok@gmail.com";
 
     private final JavaMailSender emailSender;
 
